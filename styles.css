@@ -48,21 +48,16 @@ h2 {
 
 /* Стилі для темної теми */
 .dark-theme {
-    background-color: #1a1a1a !important;
-    color: #f0f0f0 !important;
+    background-color: #0d1117 !important; 
+    color: #c9d1d9 !important;
 }
 
-    .dark-theme .section,
-    .dark-theme #header,
-    .dark-theme .modal-content {
-        background-color: #333 !important;
-        border-color: #555 !important;
-        color: white !important;
-    }
+.dark-theme h2 {
+    color: #ff7b72 !important; 
+}
 
-    .dark-theme h2 {
-        color: #4da6ff !important;
-    }
+.dark-theme #header {
+    border-bottom: 4px solid #ff7b72 !important;
 
 /* Стилі для модального вікна (форми) */
 .modal {
@@ -144,20 +139,3 @@ h2 {
     color: #666;
 }
 
-/* Стилі для темної теми */
-.dark-theme {
-    background-color: #1a1a1a !important;
-    color: #e0e0e0 !important;
-}
-
-    .dark-theme .section,
-    .dark-theme #header,
-    .dark-theme .modal-content {
-        background-color: #2d2d2d !important;
-        color: white !important;
-        border-color: #444 !important;
-    }
-
-    .dark-theme h2 {
-        color: #66b3ff !important;
-    }
