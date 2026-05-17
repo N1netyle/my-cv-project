@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме | Капиніс Роман</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+    <div id="container">
+        <div id="header">
+            <h2>Капиніс Роман</h2>
+            <div class="subtitle">Студент університету</div>
+            <div class="info">Вік: 18 років</div>
+            <button id="themeToggle">Змінити тему</button>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="section">
+                <h2>Про себе</h2>
+                <div class="text-block">Я студент, який навчається на спеціальності <strong>Кібербезпека</strong>. Цікавлюся системним адмініструванням та розробкою ПЗ.</div>
+            </div>
+
+            <div class="section">
+                <h2>Технічні навички</h2>
+                <div class="list-container">
+                    <div class="list-item">• <strong>Мови:</strong> Python, C#, SQL (MySQL)</div>
+                    <div class="list-item">• <strong>Інструменти:</strong> Git, VS Code, PyCharm</div>
+                    <div class="list-item">• <strong>ОС:</strong> Windows, Linux</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Академічний досвід</h2>
+                <div class="list-container">
+                    <div class="list-item">• Розробка бази даних "Newspaper DB" (MySQL)</div>
+                    <div class="list-item">• Налаштування мережевих тунелів у Cisco Packet Tracer</div>
+                    <div class="list-item">• Створення ігрових скриптів на Python</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Хобі та інтереси</h2>
+                <div class="text-block">Технічне обслуговування ПК, відеоігри, модинг та кіберспорт.</div>
+            </div>
+
+            <div class="section">
+                <h2>Коментарі попередніх роботодавців</h2>
+                <div id="commentsContainer">
+                    <p>Завантаження коментарів...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2>Залиште свої контакти для зв'язку</h2>
+        
+        <form id="feedbackForm" action="/api/contact" method="POST">
+            <input type="text" name="name" placeholder="Ваше ім’я" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <input type="text" name="subject" placeholder="Тема повідомлення (Subject)" required>
+            <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit">Відправити на мій сервер Node.js</button>
+        </form>
+        
+    </div>
+</div>
+
+    <footer class="section">
+        <h2>Системна інформація (localStorage)</h2>
+        <div id="storageInfo"></div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+<div id="feedback-modal" class="modal" style="padding: 20px; background: #fff; max-width: 500px; margin: 50px auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <h2>Залиште свої контакти для зв'язку</h2>
+    <form action="/api/contact" method="POST">
+        <div style="margin-bottom: 10px;">
+            <label style="display:block;">Ім'я: </label>
+            <input type="text" name="name" style="width:100%; padding:8px;" required>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label style="display:block;">Email:</label>
+            <input type="email" name="email" style="width:100%; padding:8px;" required>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label style="display:block;">Тема (Subject): </label>
+            <input type="text" name="subject" style="width:100%; padding:8px;" required>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label style="display:block;">Ваше повідомлення: </label>
+            <textarea name="message" rows="4" style="width:100%; padding:8px;" required></textarea>
+        </div>
+        <button type="submit" style="background:#28a745; color:#fff; padding:10px 15px; border:none; border-radius:4px; cursor:pointer;">
+            Відправити на мій сервер Node.js
+        </button>
+    </form>
+</div>    
+</body>
+</html>
